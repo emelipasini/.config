@@ -2,7 +2,7 @@ syntax enable
 set number
 set relativenumber
 set mouse=a
-set clipboard=unnamed
+set clipboard+=unnamedplus
 set noshowmode
 set numberwidth=1
 set showcmd
@@ -13,10 +13,14 @@ set tabstop=4 softtabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
-set scrolloff=8
+set scrolloff=10
 set signcolumn=yes
 set colorcolumn=80
 set updatetime=50
+set nohlsearch
+set nowrap
+set noswapfile
+set incsearch
 
 " Ignore files
 set wildignore+=*_build/*
@@ -30,7 +34,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
 
-    " Functionality
+    " Functionality    
     Plug 'easymotion/vim-easymotion'
     Plug 'preservim/nerdtree'
     Plug 'christoomey/vim-tmux-navigator'
@@ -68,9 +72,10 @@ map <Leader>f :Files<CR>
 map <Leader>ob :Buffers<CR>
 
 " Faster scrolling
-nnoremap <Leader>j 10<C-e>
-nnoremap <Leader>k 10<C-y>
+nnoremap <S-j> 10<C-e>
+nnoremap <S-k> 10<C-y>
 
 " CoC
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
+
