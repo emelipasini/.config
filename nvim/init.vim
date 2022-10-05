@@ -16,11 +16,13 @@ set scrolloff=20
 set signcolumn=yes
 set colorcolumn=80
 set updatetime=50
-set nohlsearch
+set hls
 set nowrap
 set noswapfile
 set incsearch
 set encoding=UTF-8
+set splitbelow
+set splitright
 
 call plug#begin()
 

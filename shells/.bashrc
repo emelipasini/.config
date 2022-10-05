@@ -9,7 +9,7 @@ alias mv="mv -i"
 alias mkdir="mkdir -p"
 
 alias df="df -h"
-alias ls="ls -lah"
+alias l="ls -lah"
 
 alias gs="git status"
 alias push="git push"
