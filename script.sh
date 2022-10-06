@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 if [ "$1" == "-all" ]; then
     ln -s ~/.dotfiles/shells/.zshrc ~/.zshrc
     ln -s ~/.dotfiles/shells/.bashrc ~/.bashrc
