@@ -1,4 +1,7 @@
 syntax on
+filetype on
+
+set cursorline
 set number
 set relativenumber
 set mouse=a
@@ -36,7 +39,6 @@ Plug 'https://github.com/preservim/nerdtree'
 Plug 'https://github.com/tc50cal/vim-terminal'
 Plug 'https://github.com/preservim/tagbar'
 Plug 'https://github.com/tpope/vim-commentary'
-Plug 'https://github.com/christoomey/vim-tmux-navigator'
 Plug 'https://github.com/easymotion/vim-easymotion'
 
 Plug 'https://github.com/tpope/vim-fugitive'
@@ -53,6 +55,11 @@ let g:airline#extensions#branch#enabled=1
 let g:airline_section_y=''
 let g:airline_skip_empty_sections=1
 let g:airline_section_z='Ln %l:%c | %L %p%%'
+
+if has('persistent_undo')
+  set undofile
+  set undodir=$HOME/.config/nvim/undo
+  endif
 
 let mapleader = ' '
 
