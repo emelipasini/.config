@@ -1,4 +1,6 @@
 syntax on
+filetype on
+
 set nocompatible
 set shortmess+=I
 set number
@@ -37,6 +39,11 @@ colorscheme elflord
 
 let &t_SI="\e[6 q"
 let &t_EI="\e[2 q"
+
+if has('persistent_undo')
+  set undofile
+  set undodir=$HOME/.vim/undo
+  endif
 
 " Try to prevent bad habits
 nnoremap <Left> :echoe "Use h"<CR>
